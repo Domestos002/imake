@@ -5,7 +5,7 @@
 @import ../bower_components/uikit/scss/components/search.scss
 @import ../bower_components/uikit/scss/components/slider.scss
 @import ../bower_components/uikit/scss/components/slidenav.scss
-@import ../bower_components/uikit/scss/components/form-file.scss
+//@import ../bower_components/uikit/scss/components/form-file.scss
 @import _reset.sass
 @import _page-template.sass
 
@@ -24,7 +24,7 @@ input
 
 .site-wrapper
     overflow: hidden
-//min-width: 320px
+    min-width: 320px
 
 .uk-container
     width: auto
@@ -71,54 +71,6 @@ input
     background-position: center center
     background-size: cover
 
-.overlay-hover
-    +trans()
-    &:hover
-        transform: scale(1.2)
-        &:before
-            height: 100%
-            width: 100%
-        &::after
-            top: 50%
-            opacity: 1
-            transform: translate3d(-50%, -50%, 0px) rotate(5deg)
-            -webkit-transform: translate3d(-50%, -50%, 0px) rotate(5deg)
-
-    &::before
-        background-color: rgba(255, 255, 255, 0.7)
-        content: ""
-        height: 0
-        left: 50%
-        position: absolute
-        top: 50%
-        transform: translate(-50%, -50%)
-        transition: all 0.3s ease 0s
-        -webkit-transition: all 0.3s ease 0s
-        width: 0
-        z-index: 1
-
-    &::after
-        font-family: $font-icon
-        background-color: #fff
-        border: 1px solid #e8e4e2
-        border-radius: 50%
-        color: #c4c4c4
-        content: "\f0c1"
-        font-size: 20px
-        height: 40px
-        left: 50%
-        line-height: 40px
-        opacity: 0
-        text-align: center
-        position: absolute
-        top: 0
-        transform: translate3d(-50%, -50%, 0px) rotate(1deg)
-        -webkit-transform: translate3d(-50%, -50%, 0px) rotate(1deg)
-        transition: all 0.3s ease 0s
-        -webkit-transition: all 0.3s ease 0s
-        width: 40px
-        z-index: 10
-
 .account-panel__item
     padding-top: 10px
     padding-bottom: 10px
@@ -158,7 +110,7 @@ input
     z-index: 1
 
 .b-new-label
-    background: $pink
+    background: $color-brand-2
     color: #fff
     display: block
     font-size: 12px
@@ -212,11 +164,11 @@ input
         border-right: 1px solid #d6d6d6
     [class*="uk-icon"]
         font-size: 35px
-        color: #00ccd6
+        color: $color-brand
         margin-bottom: 35px
         +trans()
         &:hover
-            color: $color-brand
+            color: $color-brand-2
 
 .page-footer
     background-color: $black
@@ -247,7 +199,7 @@ input
             +trans()
             color: $black
             &:hover
-                color: $pink
+                color: $color-brand-2
             &:after
                 color: $black !important
                 content: '\f006'
@@ -289,9 +241,12 @@ input
 .b-select-listing
     @extend .uk-hidden-small
     .uk-icon
+        color: #e1e0e0
         +trans()
         &:hover
-            color: $grey
+            color: gray
+        &.active
+            color: #00ccd6
 
 .products-item-wrapper
     padding-top: 15px
@@ -308,19 +263,21 @@ input
             justify-content: space-between
             padding-bottom: 35px
             padding-top: 35px
-            padding-right: 75px
+            padding-right: 20px
+            .b-products-item-caption-text
+                margin-bottom: 20px
+                display: block
 
         .b-products-item-img
             display: inline-block
             vertical-align: middle
-            max-width: 270px
             max-height: 310px
-            width: 100%
+            width: 30%
             height: 100%
         .b-products-item-caption
             display: inline-block
             vertical-align: middle
-            width: calc(100% - 305px)
+            width: calc(70% - 30px)
 
 .uk-form-select
     .jq-selectbox
@@ -511,7 +468,7 @@ input
 
 .uk-tab > li.uk-active > a
     background: transparent
-    color: $pink
+    color: $color-brand-2
 
 .uk-tab-center
     border: none
@@ -609,6 +566,8 @@ input
         display: flex
         justify-content: space-between
         align-items: center
+        .jq-selectbox__select-text
+            font-family: $font-base
 
     &__navbar
         z-index: 800
@@ -619,20 +578,43 @@ input
             transform: translateY(-50%)
             display: none
             color: #fff
+        .uk-nav-navbar
+            li 
+                a
+                    color: $txt-black
+                    &:hover, &:focus
+                        color: $color-brand
+                        background-color: transparent
+                .uk-nav-sub
+                    li
+                        a
+                            color: $txt-black
+                            &:hover, &:focus
+                                color: $color-brand
+                                background-color: transparent
         &.uk-active
-            [class*="uk-icon-"]
+            .b-page-header__navbar-basket-icon
                 display: block
+                [class*='uk-icon']
+                    color: #fff
+            .b-page-header__navbar-logo
+                display: block
+                display: flex
+                justify-content: center
+                align-items: center
         &-item
             display: flex
             align-items: stretch
             position: relative
             &:not(.uk-navbar-nav)
-                @extend .uk-hidden-small
+                @extend .uk-visible-large
+
             &.uk-navbar-nav
                 width: 100%
                 cursor: pointer
                 z-index: 800
-                @extend .uk-visible-small
+                @extend .uk-hidden-large
+
                 text-align: left
                 font-size: 16px
                 color: #fff
@@ -674,14 +656,21 @@ input
                         text-transform: uppercase
                         font-size: 15px
                         color: $black
+                    a
+                        color: #5a5a5a
+                        &:hover
+                            background-color: transparent
+                            color: $color-brand-2
+
                 a
+                    color: #5a5a5a
                     padding: 0
-                    font-size: 13px
+                    font-size: 15px
                     &:not(:last-child)
                         margin-bottom: 10px
                     &:hover
                         background-color: transparent
-                        color: $color-brand
+                        color: $color-brand-2
 
         &-link
             color: #fff
@@ -690,7 +679,7 @@ input
             justify-content: center
             +trans()
             &:hover
-                color: $pink
+                color: $color-brand-2
 
 .b-goods
     &__presentation
@@ -894,7 +883,7 @@ input
     &__contain
         .uk-grid
         position: relative
-        top: -15px
+
     &__title
         z-index: 200
         position: relative
@@ -904,12 +893,19 @@ input
         padding-top: 10px
         padding-bottom: 10px
         &-select
-            .jq-selectbox__select
-            border: 1px solid $lightgrey
             box-shadow: none !important
             height: 27px
+            .uk-form-select
+                border: 1px solid $lightgrey
+            .jq-selectbox
+                width: 150px
             .jq-selectbox__select-text
+                width: 100%
                 line-height: 27px
+            .jq-selectbox__trigger
+                border-left: 1px solid $lightgrey
+            .jq-selectbox__select
+                height: initial
             .jq-selectbox__trigger-arrow
                 line-height: 27px
                 [class*="uk-icon"]
@@ -988,7 +984,7 @@ input
                     padding-top: 15px
                     .button
                         &:hover
-                            background-color: $pink
+                            background-color: $color-brand-2
                 &.form-textarea
                     max-width: 570px
                     padding: 15px 0 15px 0
@@ -1032,6 +1028,8 @@ input
 //~SLIDER-RANGE
 .input-range-wrapper
     .slider
+        width: 100%
+        margin-top: 10px
         .tooltip-inner
             display: none !important
         .slider-track
@@ -1114,3 +1112,33 @@ input
         .uk-thumbnail-caption
             border: none
 
+.b-our-partners-slider-item
+    display: flex
+    align-items: stretch
+    a
+        width: 100%
+
+.logo-search-panel
+    .uk-modal-dialog
+        top: 50%
+        transform: translateY(-50%)
+
+.b-search-modal-dialog
+    .uk-button
+        background-color: transparent
+
+.b-page-header__navbar-logo
+    display: none
+    width: 170px
+    +position(absolute, 50% none none 0)
+    transform: translate(0, -50%) //grtr
+
+.page-header__navbar-list
+    padding-left: 170px
+    padding-right: 110px
+
+.b-products-wrapper
+    .uk-tab > li:not(.uk-active) > a:hover, .uk-tab > li:not(.uk-active) > a:focus, .uk-tab > li.uk-open:not(.uk-active) > a
+        margin-bottom: 0
+        padding-top: 8px
+        padding-bottom: 8px

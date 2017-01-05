@@ -3,7 +3,7 @@
         <div class="b-page-header__top-panel mb20">
             <div class="b-page-header__top-panel-account  fz14">
                 <a href="#" class="b-page-header__top-panel-account-item txt-black">Log in</a>
-                <a href="#" class="b-page-header__top-panel-account-item txt-black">My account</a>
+                <a href="#" class="b-page-header__top-panel-account-item txt-black uk-hidden-small">My account</a>
                 <a href="#" class="b-page-header__top-panel-account-item txt-black">My wishlists</a>
             </div>
             <div class="b-page-header__lang-panel">
@@ -25,16 +25,30 @@
             <div class="uk-grid ">
                 <div class="uk-width-3-10 fx-items-end fx-start ">
                     <div class="logo-search-panel p-rel">
-                        <form class="uk-search" data-uk-search="{source:'my-results.json'}">
-
-                            <input class="uk-search-field" type="search" placeholder="">
-
-                            <!-- This is the dropdown, which is injected through JavaScript -->
+                        <form class="uk-search uk-hidden-small">
+                            <input class="uk-search-field cur-p" type="search" placeholder=""
+                                   data-uk-modal="{target:'#my-id', center='true'}">
                             <div class="uk-dropdown uk-dropdown-search">
                                 <ul class="uk-nav uk-nav-search">...</ul>
                             </div>
-
                         </form>
+
+                        <div class="b-search-modal-dialog uk-visible-small">
+                            <button class="uk-button fz20 uk-icon-search" data-uk-modal="{target:'#search-modal'}"></button>
+                            <div id="search-modal" class="uk-modal">
+                                <div class="uk-modal-dialog">
+                                    <a class="uk-modal-close uk-close"></a>
+                                    <form class="uk-search fluid">
+                                        <input class="uk-search-field cur-p fluid" type="search" placeholder=""
+                                               data-uk-modal="{target:'#my-id'}">
+                                        <div class="uk-dropdown uk-dropdown-search">
+                                            <ul class="uk-nav uk-nav-search">...</ul>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="uk-width-4-10 fx-center fx-items-end" id="logo">
@@ -50,6 +64,9 @@
     </div>
     <div class="b-page-header__navbar" data-uk-sticky>
         <div class="uk-container uk-container-center p-rel">
+            <div class="b-page-header__navbar-logo">
+                <a href="#" class="b-header__logo"></a>
+            </div>
             <ul class="page-header__navbar-list fx-center" id="navbar-list">
                 <li class="b-page-header__navbar-item">
                     <a href="" class="b-page-header__navbar-link fz15 ttu">home</a>
@@ -99,25 +116,23 @@
                 </li>
                 <li class="b-page-header__navbar-item">
                     <a href="" class="b-page-header__navbar-link fz15 ttu">blog</a>
-                <li class="uk-parent b-page-header__navbar-item" data-uk-dropdown>
+                <li class="uk-parent b-page-header__navbar-item" data-uk-dropdown="delay: 200">
                     <a href="" class="b-page-header__navbar-link fz15 ttu">cosmetics</a>
                     <div class="uk-dropdown uk-dropdown-navbar">
-                        {% for i in 1..4 %}
-                            <ul class="uk-nav">
+                            <ul class="uk-nav ">
                                 <li>
-                                    <a href="#" class="">Lips</a>
+                                    <a href="#" class="txt-black brand-hover2">Lips</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="">Scine care</a>
+                                    <a href="#" class="txt-black brand-hover2">Scine care</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="">Brows</a>
+                                    <a href="#" class="txt-black brand-hover2">Brows</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="">Cosmetics</a>
+                                    <a href="#" class="txt-black brand-hover2">Cosmetics</a>
                                 </li>
                             </ul>
-                        {% endfor %}
                     </div>
                 </li>
                 <li class="b-page-header__navbar-item">
@@ -126,33 +141,32 @@
 
                 <li class="uk-parent b-page-header__navbar-item uk-navbar-nav"
                     data-uk-dropdown="{justify:'#header', mode:'click'}">
-                    <span class="dib fz20 cur-p">
-                        <i class="uk-icon uk-icon-list"></i>
-                        menu</span>
+                    <span class="dib fz20 cur-p fx-start fx-items-end lh-normal">
+                        <i class="uk-icon uk-icon-bars "></i>menu</span>
                     <div class="uk-dropdown uk-dropdown-navbar">
-                            <ul class="uk-nav uk-nav-navbar" data-uk-nav>
-                                <li>
-                                    <a href="#" class="">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="">Cosmetics</a>
-                                </li>
-                                <li class="uk-parent">
-                                    <a href="#">Scine care</a>
-                                    <ul class="uk-nav-sub">
-                                        <li><a href="#">Sub item</a></li>
-                                        <li><a href="#">Sub item</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="">Accessories</a>
-                                </li>
-                            </ul>
+                        <ul class="uk-nav uk-nav-navbar" data-uk-nav>
+                            <li>
+                                <a href="#" class="">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="">Cosmetics</a>
+                            </li>
+                            <li class="uk-parent">
+                                <a href="#">Scine care</a>
+                                <ul class="uk-nav-sub">
+                                    <li><a href="#">Sub item</a></li>
+                                    <li><a href="#">Sub item</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="">Accessories</a>
+                            </li>
+                        </ul>
                     </div>
                 </li>
             </ul>
             <div class="b-page-header__navbar-basket-icon">
-                <a href="#" class="uk-icon-shopping-cart fz24 p-rel">
+                <a href="#" class="uk-icon uk-icon-shopping-cart fz24 p-rel">
                     <span class="circle-counter">0</span>
                 </a>
             </div>

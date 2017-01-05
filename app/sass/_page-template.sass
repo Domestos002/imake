@@ -17,6 +17,12 @@
 
 
 /*--------------------------------------------------------------*/
+.hidden
+    display: none
+
+.lh-normal
+    line-height: 1em
+
 .shift-15
     > *
         &:not(:last-child)
@@ -123,6 +129,12 @@ h1, h2, h3, h4, h5
 .txt-bold
     font-weight: bold
 
+.ffb-bold
+    font-family: $font-base-bold
+
+.ffb-italic
+    font-family: $font-base-italic
+
 .txt-light
     font-weight: 600
 
@@ -166,8 +178,13 @@ a.txt-pink
             +trans()
             color: $color-brand
 
-//.no-hover
+.brand-hover2
+    +trans()
     &:hover
+        color: $color-brand-2
+        > *
+            +trans()
+            color: $color-brand-2
 
 
 
@@ -236,7 +253,72 @@ a.txt-pink
         background-color: transparent
         color: $color-brand
 
+.overlay-hover
+    +trans()
+    &:hover
+        transform: scale(1.2)
+        &:before
+            height: 100%
+            width: 100%
+        &::after
+            top: 50%
+            opacity: 1
+            transform: translate3d(-50%, -50%, 0px) rotate(360deg)
+            -webkit-transform: translate3d(-50%, -50%, 0px) rotate(360deg)
 
+    &::before
+        background-color: rgba(255, 255, 255, 0.7)
+        content: ""
+        height: 0
+        left: 50%
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+        transition: all 0.3s ease 0s
+        width: 0
+        z-index: 1
+
+    &::after
+        font-size: 18px
+        height: 35px
+        left: 50%
+        line-height: 37px
+        opacity: 0
+        text-align: center
+        position: absolute
+        top: 0
+        transform: translate3d(-50%, -50%, 0px) rotate(1deg)
+        transition: all 0.3s ease 0s
+        width: 35px
+        z-index: 10
+        box-sizing: border-box
+        font-family: $font-icon
+        background-color: #fff
+        border: 1px solid #e8e4e2
+        border-radius: 50%
+        color: $color-brand-2
+        content: "\f0c1"
+
+.button-up
+    bottom: 40px
+    position: fixed
+    right: 30px
+    text-align: center
+    width: auto
+    z-index: 9999
+    opacity: 0
+    visibility: hidden
+    transition: all 0.5s
+    -webkit-transition: all 0.5s
+    color: #fff
+    cursor: pointer
+    display: inline-block
+    font-size: 10px
+    height: 50px
+    line-height: 50px
+    padding-top: 2px
+    text-decoration: underline
+    background-color: transparent
 
 
 

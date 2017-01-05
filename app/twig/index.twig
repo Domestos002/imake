@@ -4,8 +4,8 @@
 
 {% block content %}
     <div class="page-content">
-        <div class="b-slideshow p-rel ovh">
-            <ul class="uk-slideshow" data-uk-slideshow="{autoplay:true}">
+        <div class="b-slideshow p-rel ovh mb20">
+            <ul class="uk-slideshow" data-uk-slideshow="{autoplay:true, animation: 'random-fx', autoplayInterval='200'}">
                 <li>
                     <img src="https://getuikit.com/docs/images/placeholder_800x400_1.jpg">
                 </li>
@@ -20,7 +20,7 @@
             {% for i in 1..5 %}
                 <div class="b-masonry-grid__item p-rel">
                     <div class="b-masonry-content dib overlay-hover"
-                         style="background-image: url(http://dummyimage.com/1000);">
+                         style="background-image: url(http://placehold.it/1000x1000);">
                     </div>
                 </div>
             {% endfor %}
@@ -28,7 +28,7 @@
     </div>
     <div class="uk-container uk-container-center">
         <div class="b-divider p-rel">
-            <span class="b-divider-title ttu">RELATED PRODUCTS</span>
+            <span class="b-divider-title ttu ">RELATED PRODUCTS</span>
         </div>
         <div class="b-products-wrapper">
             <div class="uk-tab-center mb30">
@@ -44,7 +44,7 @@
                     {% for i in 1..4 %}
                         <li class="b-products-list uk-grid">
                             {% for i in 1..8 %}
-                                <div class="products-item-wrapper uk-width-medium-1-4">
+                                <div class="products-item-wrapper uk-width-1-1 uk-width-small-1-2 uk-width-medium-1-4">
                                     {% include "elements/b-products-item.twig" %}
                                 </div>
                             {% endfor %}
@@ -53,17 +53,17 @@
                 </ul>
             </div>
             <div class="uk-grid">
-                <div class="uk-width-small-1-1 uk-width-medium-1-2">
+                <div class="uk-width-1-2">
                     <div class="ovh">
                         <div class="img-wrapper overlay-hover">
-                            <img src="http://dummyimage.com/800x400" alt="">
+                            <img src="http://placehold.it/1000x1000" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="uk-width-small-1-1 uk-width-medium-1-2">
+                <div class="uk-width-1-2">
                     <div class="ovh">
                         <div class="img-wrapper overlay-hover">
-                            <img src="http://dummyimage.com/800x400" alt="">
+                            <img src="http://placehold.it/1000x1000" alt="">
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                                         <a class="uk-thumbnail" href="">
                                             <div class="p-rel ovh">
                                                 <div class="img-wrapper overlay-hover">
-                                                    <img src="http://dummyimage.com/1000x1000" alt="">
+                                                    <img src="http://placehold.it/1000x1000" alt="">
                                                 </div>
                                                 <span class="b-post-date">
                                                     <span class="b-post-date__main">14 </span>

@@ -5,6 +5,38 @@
 
 
 @media (max-width: $breakpoint-medium-max)
+    .b-page-header__navbar-basket-icon
+        display: none !important
+    .b-page-header__navbar-logo
+        display: none !important
+    .b-masonry-grid
+        overflow: hidden
+        width: calc(100% + 15px)
+        font-size: 0
+        line-height: 0
+        margin-left: -5px
+        &__item
+            margin: 7px
+            &:nth-child(1n)
+                padding: 14% 0
+                width: calc(45% - 15px)
+
+            &:nth-child(2n)
+                width: calc(55% - 15px)
+
+            &:nth-child(3n)
+                padding: 20% 0
+                width: calc(100% - 15px)
+
+            &:nth-child(4n)
+                margin-top: 7px
+                padding: 14% 0
+                width: calc(65% - 15px)
+
+            &:nth-child(5n)
+                padding: 14% 0
+                width: calc(35% - 15px)
+
     .b-posts-item
         flex-direction: column
         padding-left: 10px
@@ -15,7 +47,25 @@
     .b-posts-item__img
         margin-bottom: 10px
 
+    .page-header__navbar-list
+        padding-left: 0
+        padding-right: 0
+
+    .b-page-header__navbar
+        position: static !important
+
+
+
 @media (max-width: $breakpoint-medium)
+    .b-products-wrapper
+        .uk-tab
+            li
+                width: 50%
+                border: none
+                padding: 0
+                &:hover
+                    border: none
+            padding: 0
     .b-posts-item
         padding: 0
         flex-direction: row
@@ -84,6 +134,15 @@
     .b-page-header__top-panel-account-item, .b-page-header__lang-panel
         font-size: 11px
 
+
+    .b-page-header__lang-panel
+        .jq-selectbox__select
+            padding: 0 25px 0 0  //fqwe
+            &-text
+                font-size: 11px
+        .jq-selectbox__dropdown
+            font-size: 11px
+
     .fx-md-column
         flex-direction: column
 
@@ -115,8 +174,6 @@
     .page-footer__copyright
         padding-bottom: 30px
 
-    .b-page-header__navbar
-        position: static !important
 
     .footer-column
         &:first-child
@@ -162,35 +219,37 @@
     .page-footer__copyright-navbar
         line-height: 20px
         font-size: 13px
-
     .b-masonry-grid
-        overflow: hidden
         width: 100%
-        font-size: 0
-        line-height: 0
-        margin-left: -15px
+        margin-left: 0
         &__item
-            width: 100%
-            margin: 15px
-            padding: 25% 0
-            display: inline-block
-            vertical-align: top
-            position: relative
-            overflow: hidden
-            .uk-overlay
-                +position(absolute, 0 0 0 0)
+            &:nth-child(1n)
+                padding: 25% 0
+                width: 100%
+
+            &:nth-child(2n)
+                padding: 25% 0
+                width: 100%
+
             &:nth-child(3n)
-                padding: 14% 0
+                padding: 25% 0
+                width: 100%
 
             &:nth-child(4n)
-                margin-top: calc((6% - 15px) * -1)
+                margin-top: 7px
+                padding: 25% 0
                 width: 100%
-                padding: 14% 0
 
             &:nth-child(5n)
-                padding: 11% 0
+                padding: 25% 0
+                width: 100%
+
+    .page-content
+        margin-bottom: 20px
 
 @media (max-width: $breakpoint-small-max)
+
+
     .b-page-content-info-item-wrapper
         &:not(:last-child)
             margin-bottom: 20px
