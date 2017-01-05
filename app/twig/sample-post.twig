@@ -1,0 +1,182 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+    {% include "widgets/breadcrumb.twig" %}
+    <div class="page-content">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid">
+                <div class="page-content__sidebar sidebar-nav uk-width-small-1-1 uk-width-medium-1-4">
+                    {% include "elements/sidebar-latest-posts.twig" %}
+                    {% include "elements/sidebar-popular-posts.twig" %}
+                    {% include "elements/sidebar-blog-categories.twig" %}
+                    {% include "elements/sidebar-search-in-blog.twig" %}
+                    {% include "elements/sidebar-blog-tags.twig" %}
+                </div>
+                <div class="page-content__main uk-width-small-1-1 uk-width-medium-3-4">
+                    <div class="page-content__main__post post mb20">
+                        <div class="img-wrapper mb15">
+                            <img src="http://dummyimage.com/870x423" alt="" class="">
+                        </div>
+                        <div class="post__info info">
+                            <div class="post__info__title">
+                                <p class="fz16 mb10 txt-bold txt-black">BUY CHEAP WOMEN'S SHOES, BOOTS & HEELS.</p>
+                            </div>
+                            <div class="post__info__details tal">
+                                <a href="" class="txt-pink dib vam">Fashion</a>
+                                <span class="b-blog__post-date dib vam">September 14th 2016</span>
+                                <div class="posted-autor dib vam">
+                                    Posted by:
+                                    <strong>Dola Nguyen</strong>
+                                </div>
+                            </div>
+                            <div class="post__info__socials">
+
+                            </div>
+                            <div class="base-text txt-black lh26 mb20">
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                    ea
+                                    commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                    inventore
+                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                    magni
+                                    dolores eos qui ratione voluptatem sequi nesciunt.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                    ex ea
+                                    commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                    inventore
+                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                    magni
+                                    dolores eos qui ratione voluptatem sequi nesciunt.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                    ex ea
+                                    commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                    inventore
+                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                    magni
+                                    dolores eos qui ratione voluptatem sequi nesciunt.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                    ex ea
+                                    commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                    inventore
+                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                    magni
+                                    dolores eos qui ratione voluptatem sequi nesciunt.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                    ex ea
+                                    commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                    inventore
+                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                    magni
+                                    dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                            </div>
+                        </div>
+                        <div class="post__info__socials socials mb20">
+                            <div class="socials__tags fx-justify">
+                                <p class="txt-grey ttu dib fz11">tags
+                                    <a href="#" class="txt-pink ttu dib">CONSECTETUR</a>,
+                                    <a href="#" class="txt-pink ttu dib">LOREM</a>
+                                </p>
+                                <div class="b-socials-reviews fx-justify">
+                                    <div class="b-socials-reviews__item">
+                                        <div class="dib vam b-star-evaluation">
+                                            <span class="uk-icon uk-icon-star"></span>
+                                            <span class="uk-icon uk-icon-star"></span>
+                                            <span class="uk-icon uk-icon-star"></span>
+                                            <span class="uk-icon uk-icon-star"></span>
+                                            <span class="uk-icon uk-icon-star-o"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="b-socials-reviews__item ">
+                                        <span class="uk-icon-comment-o"></span>
+                                        <p class="di">38</p>
+                                    </div>
+                                    <div class="b-socials-reviews__item item">
+                                        <span class="uk-icon-thumbs-o-up"></span>
+                                        <p class="di">38</p>
+                                    </div>
+                                    <div class="b-socials-reviews__item item">
+                                        <span class="uk-icon-eye"></span>
+                                        <p class="di">38</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post__info__comment comment">
+                            <div class="comment__title title">
+                                <div class="title__header">
+                                    <p class="fz18 txt-bold">Leave a comment</p>
+                                </div>
+                                <div class="title__content">
+                                    <div class="title__content__alert">
+                                        <p class="txt-white">
+                                            Log in to post comments
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="title__footer">
+                                    <p class="fz18 txt-bold">Comment</p>
+                                </div>
+                            </div>
+                            <div class="comment-list-wrapper">
+                                <ul class="comment-list">
+                                    <li class="comment-list__item item">
+                                        <div class="item-title lh26">
+                                            <p class="txt-black fz14"> good article</p>
+                                            <p>By : Jully SmileSeptember 23rd 2016</p>
+                                        </div>
+                                        <div class="item-rating">
+                                            <p class="dib vam mb10">Rating</p>
+                                            <div class="b-socials__review dib vam">
+                                                <span class="uk-icon-star"></span>
+                                                <span class="uk-icon-star"></span>
+                                                <span class="uk-icon-star"></span>
+                                                <span class="uk-icon-star"></span>
+                                                <span class="uk-icon-star-o"></span>
+                                            </div>
+                                        </div>
+                                        <div class="item-text">
+                                            <p>
+                                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                                ut
+                                                aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste
+                                                natus
+                                                error sit voluptatem accusantium doloremque laudantium, totam rem
+                                                aperiam,
+                                                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                                                vitae
+                                                dicta sunt explicabo.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-related-posts p-rel">
+                        <span class="fz18 txt-bold txt-black">Related posts</span>
+                        <div class="uk-grid">
+                            {% for i in 1..6 %}
+                                {% include "elements/b-posts-item.twig"%}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    {% include "widgets/advantages-widget.twig" %}
+        </div>
+    </div>
+{% endblock %}

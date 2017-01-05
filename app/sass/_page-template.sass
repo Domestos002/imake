@@ -1,0 +1,242 @@
+@import _imports.sass
+
+/*--------------------------------------------------------------------*/
+//~ICONS
+
+//[class*='icon-']
+    font-family: $font-icon
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1em
+    font-size: 14px
+    speak: none
+    display: inline-block
+
+
+
+/*--------------------------------------------------------------*/
+.shift-15
+    > *
+        &:not(:last-child)
+            margin-right: 15px
+
+//~TXT
+
+.icon-phone
+    &:before
+        content: '\f27a'
+        font-family: $font-icon
+        font-size: 15px
+        color: $black
+        margin-right: 10px
+
+*:not(.tdu)
+    text-decoration: none
+
+.td-th
+    text-decoration: line-through !important
+
+h1, h2, h3, h4, h5
+    font-family: $font-base-bold
+    font-weight: 700
+    line-height: normal
+    &.no-ttu
+        text-transform: none
+    &.font-normal
+        font-weight: 400
+
+.no-gutter > [class*='col-']
+    padding-right: 0
+    padding-left: 0
+    &:before
+        content: ''
+        display: block
+        clear: both
+
+.overlay
+    position: relative
+    &:hover
+        &:before
+            z-index: 400
+            position: absolute
+            top: 0
+            right: 0
+            width: 100%
+            height: 100%
+            background: rgba(0, 0, 0, 0.3)
+            content: ''
+
+
+.img-responsive
+    //min-width: 100%
+    max-width: 100%
+    height: auto
+
+.under-line
+    &:after
+        content: ''
+        margin-top: 10px
+        display: block
+        width: 20px
+        height: 3px
+        background-color: $yellow
+
+.fluid
+    width: 100%
+    height: auto
+
+.clearfix
+    &:before
+        display: table
+        content: ''
+        clear: both
+        height: 100%
+
+.d-block
+    display: block
+
+.b-label-warning
+    background-color: $orange
+    color: #fff
+    padding: 6px 10px
+    font-weight: bold
+    text-align: center
+    font-size: 12px
+
+
+/*----------------------------------*/
+//~FZ
+
+@each $fz in (11, 13, 14, 15, 18, 16, 20, 22, 24, 25, 35, 12, 40)
+    .fz#{$fz}
+        font-size: $fz + px
+
+/*----------------------------------*/
+//~LH
+
+@each $lh in (15, 18, 26, 20, 40, 33, 0,)
+    .lh#{$lh}
+        line-height: $lh + px
+
+.txt-bold
+    font-weight: bold
+
+.txt-light
+    font-weight: 600
+
+.txt-normal
+    font-weight: 600
+
+/*----------------------------------*/
+//~TXT-COLORS
+
+.txt-blue
+    color: $blue
+
+.txt-grey
+    color: $txt-grey
+
+.txt-white
+    color: #fff
+
+a.txt-pink
+    &:hover
+        color: $pink * 0.8 //egr
+
+.txt-pink
+    color: $pink
+
+
+.txt-yellow
+    color: $yellow
+
+.txt-black
+    color: $black
+
+.txt-red
+    color: $red
+
+.brand-hover
+    +trans()
+    &:hover
+        color: $color-brand
+        > *
+            +trans()
+            color: $color-brand
+
+//.no-hover
+    &:hover
+
+
+
+/*--------------------------------------------------------------*/
+//~BTN
+
+.btn
+    font-family: $font-base-bold
+    background-color: #fff
+    padding: 0 15px 0 15px
+    color: $black
+    line-height: 30px
+    //whte
+    border-radius: 5px
+    max-width: 305px
+    border: 1px solid black
+    white-space: normal !important
+    &.brn
+        border-radius: 0
+
+    &:hover
+        color: #fff
+        background-color: $red
+        border-color: $red
+
+
+.blue-btn
+    background-color: #00ccd6
+    border: none
+    border-radius: 0
+    color: #fff
+    &:hover
+        background-color: $color-brand
+
+.white-btn
+    border: 1px solid #dbdbdb
+    color: #494949
+    background-color: white
+    +trans()
+    border-radius: 2px
+    &:hover
+        background-color: transparent
+        border-color: #dbdbdb
+
+        color: #a0a0a0
+
+.white-brand-btn
+    border: 1px solid $black
+    color: $black
+    background-color: white
+    +trans()
+    border-radius: 0
+    &:hover
+        background-color: $color-brand //er
+        border-color: $color-brand
+        color: #fff
+
+.empty-btn
+    border: 1px solid #dbdbdb
+    background-color: transparent
+    color: #5a5a5a
+    +trans()
+    padding: 0 20px
+    &:hover
+        border-color: $color-brand
+        background-color: transparent
+        color: $color-brand
+
+
+
+
+

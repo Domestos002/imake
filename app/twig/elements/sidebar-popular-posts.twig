@@ -1,0 +1,29 @@
+<div class="page-content__sidebar-item-wrapper">
+    <div class="page-content__sidebar-item__title">
+        <p class="fz16 ttu">POPULAR POSTS</p>
+    </div>
+    <div class="page-content__sidebar-item__content">
+        <div class="b-posts">
+            {% for i in 1..5 %}
+                <div class="b-posts-item">
+                    <div class="b-posts-item__img">
+                        <img src="http://dummyimage.com/110x92" class="fluid" alt="">
+                    </div>
+                    <div class="b-posts-item__info">
+                        <a href="#" class="fz12">
+                            MEN'S FASHION TRENDS Top 10 Street Style Trends
+                        </a>
+                        <div class="b-posts__tags fz12">
+                            <a href="">fashion</a>
+                            <a href="">cosmetics</a>
+                            <a href="">electronics</a>
+                            <a href="">jewelry</a>
+                        </div>
+                        <span class="b-blog__post-date">September 14th 2016</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,154 @@
+@import ../_my-variables.sass
+
+.left
+    float: left
+
+.right
+    float: right
+
+.ovh
+    overflow: hidden
+
+.vat
+    vertical-align: top
+
+.dib
+    display: inline-block
+    vertical-align: middle
+
+.vab
+    vertical-align: bottom
+
+.di
+    display: inline
+
+.centered
+    margin: 0 auto
+
+.centered-y
+    margin: auto
+
+.abs_centered
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.inline-centered
+    display: inline-block
+    vertical-align: middle
+    &:before
+        display: inline-block
+        vertical-align: middle
+        height: 100%
+
+.tac
+    text-align: center
+
+.tal
+    text-align: left
+
+.tar
+    text-align: right
+
+.cur-p
+    cursor: pointer
+
+.p-rel
+    position: relative
+
+.ttu
+    text-transform: uppercase
+
+.white
+    color: #fff
+
+.tdu
+    text-decoration: underline
+
+/*--------------------------------------------------------------------*/
+//~INDENTS
+
+@each $mb in (5, 10, 15, 25, 40, 0, 30, 20, 45, 50, 85)
+    .mb#{$mb}
+        margin-bottom: $mb + px
+
+@each $mr in (5, 15, 20, 10, 25)
+    .mr#{$mr}
+        margin-right: $mr + px
+
+
+@each $ml in (15, 20, 10)
+    .ml#{$ml}
+        margin-left: $ml + px
+
+@each $pl in (15, 20, 10)
+    .pl#{$pl}
+        padding-left: $pl + px
+
+/*--------------------------------------------------------------------*/
+//~FLEX
+.d-fx
+    display: flex
+
+.fx-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+.fx-items-center
+    display: flex
+    align-items: center
+
+.fx-items-start
+    display: flex
+    align-items: flex-start
+
+
+.fx-items-baseline
+    display: flex
+    align-items: baseline
+
+.fx-wrap
+    flex-wrap: wrap
+    display: flex
+
+.fx-end
+    display: flex
+    justify-content: flex-end
+
+.fx-no-wrap
+    flex-wrap: nowrap
+    display: flex
+
+.fx-justify
+    display: flex
+    justify-content: space-between
+
+.fx-start
+    justify-content: flex-start
+
+.fx-column
+    display: flex
+    flex-direction: column
+    align-self: baseline
+
+.fx-row
+    display: flex
+    flex-direction: row
+    align-items: center
+
+.fx-baseline
+    display: flex
+    align-items: baseline
+
+.fx-start
+    display: flex
+    justify-content: flex-start
+
+.fx-items-end
+    align-items: flex-end
+
+.fx-strech
+    display: flex
+    align-items: stretch

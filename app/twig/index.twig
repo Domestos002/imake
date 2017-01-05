@@ -1,0 +1,137 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+    <div class="page-content">
+        <div class="b-slideshow p-rel ovh">
+            <ul class="uk-slideshow" data-uk-slideshow="{autoplay:true}">
+                <li>
+                    <img src="https://getuikit.com/docs/images/placeholder_800x400_1.jpg">
+                </li>
+                <li>
+                    <img src="https://getuikit.com/docs/images/placeholder_800x400_2.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="b-masonry-grid">
+        <div class="uk-container uk-container-center">
+            {% for i in 1..5 %}
+                <div class="b-masonry-grid__item p-rel">
+                    <div class="b-masonry-content dib overlay-hover"
+                         style="background-image: url(http://dummyimage.com/1000);">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="uk-container uk-container-center">
+        <div class="b-divider p-rel">
+            <span class="b-divider-title ttu">RELATED PRODUCTS</span>
+        </div>
+        <div class="b-products-wrapper">
+            <div class="uk-tab-center mb30">
+                <ul class="uk-tab index-switcher" data-uk-switcher="{connect:'#products'}">
+                    <li><a href="">Popular</a></li>
+                    <li><a href="">New&nbsp;arrivals</a></li>
+                    <li><a href="">Best&nbsp;Sellers</a></li>
+                    <li><a href="">Specials</a></li>
+                </ul>
+            </div>
+            <div class="b-products mb30">
+                <ul id="products" class="ovh uk-switcher uk-margin">
+                    {% for i in 1..4 %}
+                        <li class="b-products-list uk-grid">
+                            {% for i in 1..8 %}
+                                <div class="products-item-wrapper uk-width-medium-1-4">
+                                    {% include "elements/b-products-item.twig" %}
+                                </div>
+                            {% endfor %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="uk-grid">
+                <div class="uk-width-small-1-1 uk-width-medium-1-2">
+                    <div class="ovh">
+                        <div class="img-wrapper overlay-hover">
+                            <img src="http://dummyimage.com/800x400" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-small-1-1 uk-width-medium-1-2">
+                    <div class="ovh">
+                        <div class="img-wrapper overlay-hover">
+                            <img src="http://dummyimage.com/800x400" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-related-products-slider products-slider">
+                <div class="b-divider p-rel">
+                    <span class="b-divider-title ttu">FROM OUR BLOG</span>
+                </div>
+                <div class="b-related-products-slider__content uk-slidenav-position p-rel" data-uk-slider>
+                    <div class="uk-slider-container">
+                        <ul class="uk-slider uk-grid-width-1-1 uk-grid-width-small-1-2 uk-grid-width-medium-1-3"
+                            data-uk-grid="{gutter: 30}">
+                            {% for i in 1..10 %}
+                                <li>
+                                    <div class="b-related-posts-item our-blog ">
+                                        <a class="uk-thumbnail" href="">
+                                            <div class="p-rel ovh">
+                                                <div class="img-wrapper overlay-hover">
+                                                    <img src="http://dummyimage.com/1000x1000" alt="">
+                                                </div>
+                                                <span class="b-post-date">
+                                                    <span class="b-post-date__main">14 </span>
+                                                    <span class="b-post-date__m-y">Sep <br>2016</span>
+                                            </span>
+                                            </div>
+                                            <div class="uk-thumbnail-caption">
+                                                <div class="links-list tal mb15">
+                                                    <a href="#" class="brand-hover links-list-item txt-black fz14">BUY
+                                                        CHEAP WOMEN'S
+                                                        SHOES</a>
+                                                    <a href="#" class="brand-hover links-list-item txt-black fz14">BOOTS
+                                                        & HEELS</a>
+                                                </div>
+                                                <p class="txt-black tal mb20">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nihil,
+                                                    possimus! Autem ducimus et hic ipsam magni maiores odit saepe!
+                                                </p>
+                                                <div class="fx-start fz11">
+                                                    <a href="#" class="ttu dib vam mr5">fashion</a>
+                                                    <span class="b-blog__post-date dib vam">0 comments</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous"
+                       data-uk-slider-item="previous"></a>
+                    <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slider-item="next"></a>
+                </div>
+            </div>
+            <div class="b-our-partners-slider" data-uk-slider="{autoplay: true}">
+                <div class="uk-slider-container">
+                    <ul class="uk-slider uk-grid-width-1-2 uk-grid-width-small-1-3 uk-grid-width-medium-1-4 uk-grid-width-large-1-5">
+                        {% for i in 1..10 %}
+                            <li class="b-our-partners-slider-item">
+                                <a href="#">
+                                    <img src="http://theme.yourbestcode.com/imake/img/m/8.jpg" alt="">
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        {% include "widgets/advantages-widget.twig" %}
+    </div>
+{% endblock %}

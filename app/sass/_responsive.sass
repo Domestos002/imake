@@ -1,0 +1,215 @@
+@import _imports.sass
+@media (max-width: 1220px)
+    .b-advantages__adv-list-item-wrapper
+        width: 175px
+
+
+@media (max-width: $breakpoint-medium-max)
+    .b-posts-item
+        flex-direction: column
+        padding-left: 10px
+        padding-right: 10px
+    .b-posts-item__img, .b-posts-item__info
+        width: 100%
+
+    .b-posts-item__img
+        margin-bottom: 10px
+
+@media (max-width: $breakpoint-medium)
+    .b-posts-item
+        padding: 0
+        flex-direction: row
+        justify-content: space-between
+        &__img
+            width: 30%
+            height: auto
+            margin-bottom: 0
+        &__info
+            width: calc(70% - 10px)
+        &:not(:last-child)
+            margin-bottom: 25px
+
+    .sidebar-nav
+        display: block !important
+        .page-content__sidebar-item
+            &__title
+                width: 100%
+
+    .page-content__sidebar
+        margin-bottom: 30px
+
+    .page-content__sidebar-item__title
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        cursor: pointer
+        &.active
+            &:after
+                content: '\f068'
+        &:after
+            content: '\f067'
+            font-family: $font-icon
+            color: $black
+
+
+    .page-content__sidebar-item__content
+        display: none
+
+    .b-related-posts
+        .uk-thumbnail-caption
+            padding: 10px 15px
+
+    .content__sharing-buttons
+        font-size: 13px
+
+    .info__social-buttons
+        .empty-btn
+            font-size: 13px
+            padding: 0 5px
+
+    .md-fx-column
+        display: flex
+        flex-direction: column
+
+    .md-tal
+        text-align: left
+
+    .md-fluid
+        width: 100%
+    .page-header__navbar-list
+        justify-content: flex-start
+    .uk-container
+        padding: 0 15px
+
+    .b-page-header__top-panel-account-item, .b-page-header__lang-panel
+        font-size: 11px
+
+    .fx-md-column
+        flex-direction: column
+
+    @each $fz in (11, 13)
+        .md-fz#{$fz}
+            font-size: $fz + px
+
+    @each $mb in (10)
+        .md-mb#{$mb}
+            margin-bottom: $mb + px
+
+    .advantages-widget
+        transform: translateY(0)
+        margin-top: 60px //we
+        margin-bottom: 30px
+
+    .page-footer
+        padding-top: 0
+
+    .page-footer__copyright-title
+        margin: 30px 0 0
+
+    .b-copyright__nav-item
+        font-size: 13px
+
+    .advantages-widget-item
+        padding-top: 0
+
+    .page-footer__copyright
+        padding-bottom: 30px
+
+    .b-page-header__navbar
+        position: static !important
+
+    .footer-column
+        &:first-child
+            .footer-column__info
+                [class*="uk-icon"]
+                    margin-right: 10px
+        &-wrapper
+            flex-direction: column
+            padding-bottom: 20px
+            padding-top: 20px
+        &__title
+            cursor: pointer
+            display: flex
+            justify-content: space-between
+            width: 100%
+            margin: 15px 0
+            &.active
+                &:after
+                    content: '\f056'
+                    font-family: $font-icon
+                    display: flex
+                    justify-content: center
+                    align-items: center
+            &:after
+                content: '\f055'
+                font-family: $font-icon
+                display: flex
+                justify-content: center
+                align-items: center
+        &__info
+            display: none
+            font-size: 15px
+
+        .jq-selectbox__select
+            font-size: 11px !important
+
+    .b-masonry-grid
+        .uk-container
+            padding: 0
+
+
+@media (max-width: $breakpoint-mini-max)
+    .page-footer__copyright-navbar
+        line-height: 20px
+        font-size: 13px
+
+    .b-masonry-grid
+        overflow: hidden
+        width: 100%
+        font-size: 0
+        line-height: 0
+        margin-left: -15px
+        &__item
+            width: 100%
+            margin: 15px
+            padding: 25% 0
+            display: inline-block
+            vertical-align: top
+            position: relative
+            overflow: hidden
+            .uk-overlay
+                +position(absolute, 0 0 0 0)
+            &:nth-child(3n)
+                padding: 14% 0
+
+            &:nth-child(4n)
+                margin-top: calc((6% - 15px) * -1)
+                width: 100%
+                padding: 14% 0
+
+            &:nth-child(5n)
+                padding: 11% 0
+
+@media (max-width: $breakpoint-small-max)
+    .b-page-content-info-item-wrapper
+        &:not(:last-child)
+            margin-bottom: 20px
+
+    .b-page-content-info-item
+        .uk-icon-button
+            flex-basis: 55px
+            height: 55px
+            font-size: 25px
+            line-height: 55px
+
+
+@media (max-width: 755px)
+    .uk-lightbox-content
+        padding-top: 22px
+        padding-bottom: 0
+
+
+
+
+
+

@@ -1,0 +1,162 @@
+<header class="b-page-header" id="header">
+    <div class="uk-container uk-container-center">
+        <div class="b-page-header__top-panel mb20">
+            <div class="b-page-header__top-panel-account  fz14">
+                <a href="#" class="b-page-header__top-panel-account-item txt-black">Log in</a>
+                <a href="#" class="b-page-header__top-panel-account-item txt-black">My account</a>
+                <a href="#" class="b-page-header__top-panel-account-item txt-black">My wishlists</a>
+            </div>
+            <div class="b-page-header__lang-panel">
+                <div class="uk-form-select" data-uk-form-select>
+                    <select class="selectBox fz20">
+                        <option value="">English</option>
+                        <option value="">USD</option>
+                    </select>
+                </div>
+                <div class="uk-form-select" data-uk-form-select>
+                    <select class="selectBox">
+                        <option value="">English</option>
+                        <option value="">USD</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="page-header__logo-panel mb50">
+            <div class="uk-grid ">
+                <div class="uk-width-3-10 fx-items-end fx-start ">
+                    <div class="logo-search-panel p-rel">
+                        <form class="uk-search" data-uk-search="{source:'my-results.json'}">
+
+                            <input class="uk-search-field" type="search" placeholder="">
+
+                            <!-- This is the dropdown, which is injected through JavaScript -->
+                            <div class="uk-dropdown uk-dropdown-search">
+                                <ul class="uk-nav uk-nav-search">...</ul>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="uk-width-4-10 fx-center fx-items-end" id="logo">
+                    <a href="#" class="b-header__logo"></a>
+                </div>
+                <div class="uk-width-3-10 fx-end fx-items-end">
+                    <a href="" class="fz24 txt-black uk-icon-shopping-cart p-rel">
+                        <span class="circle-counter">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-page-header__navbar" data-uk-sticky>
+        <div class="uk-container uk-container-center p-rel">
+            <ul class="page-header__navbar-list fx-center" id="navbar-list">
+                <li class="b-page-header__navbar-item">
+                    <a href="" class="b-page-header__navbar-link fz15 ttu">home</a>
+                </li>
+                <li class="uk-parent b-page-header__navbar-item" data-uk-dropdown="{justify:'#navbar-list'}">
+                    <a href="" class="b-page-header__navbar-link fz15 ttu">cosmetics</a>
+
+                    <div class="uk-dropdown uk-dropdown-navbar list-dd-wrapper">
+                        <div class="mb30">
+                            {% for i in 1..4 %}
+                                <ul class="uk-nav list-dd">
+                                    <li>
+                                        <p class="">Lorem ipsum.</p>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="list-dd-item">Lips</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="list-dd-item">Scine care</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="list-dd-item">Brows</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="list-dd-item">Cosmetics</a>
+                                    </li>
+                                </ul>
+                            {% endfor %}
+                        </div>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-2">
+                                <img src="http://theme.yourbestcode.com/imake/modules/ybc_megamenu/images/column/hygiene-870763_960_720.jpg"
+                                     alt="">
+                            </div>
+                            <div class="uk-width-1-2">
+                                <img src="http://theme.yourbestcode.com/imake/modules/ybc_megamenu/images/column/hygiene-870763_960_720.jpg"
+                                     alt="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="b-page-header__navbar-item">
+                    <a href="" class="b-page-header__navbar-link fz15 ttu">skin&nbsp;care</a>
+                </li>
+                <li class="b-page-header__navbar-item">
+                    <a href="" class="b-page-header__navbar-link fz15 ttu">accessories</a>
+                </li>
+                <li class="b-page-header__navbar-item">
+                    <a href="" class="b-page-header__navbar-link fz15 ttu">blog</a>
+                <li class="uk-parent b-page-header__navbar-item" data-uk-dropdown>
+                    <a href="" class="b-page-header__navbar-link fz15 ttu">cosmetics</a>
+                    <div class="uk-dropdown uk-dropdown-navbar">
+                        {% for i in 1..4 %}
+                            <ul class="uk-nav">
+                                <li>
+                                    <a href="#" class="">Lips</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">Scine care</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">Brows</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">Cosmetics</a>
+                                </li>
+                            </ul>
+                        {% endfor %}
+                    </div>
+                </li>
+                <li class="b-page-header__navbar-item">
+                    <a href="" class="b-page-header__navbar-link fz15 ttu">contact</a>
+                </li>
+
+                <li class="uk-parent b-page-header__navbar-item uk-navbar-nav"
+                    data-uk-dropdown="{justify:'#header', mode:'click'}">
+                    <span class="dib fz20 cur-p">
+                        <i class="uk-icon uk-icon-list"></i>
+                        menu</span>
+                    <div class="uk-dropdown uk-dropdown-navbar">
+                            <ul class="uk-nav uk-nav-navbar" data-uk-nav>
+                                <li>
+                                    <a href="#" class="">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">Cosmetics</a>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Scine care</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="#">Sub item</a></li>
+                                        <li><a href="#">Sub item</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="">Accessories</a>
+                                </li>
+                            </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="b-page-header__navbar-basket-icon">
+                <a href="#" class="uk-icon-shopping-cart fz24 p-rel">
+                    <span class="circle-counter">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</header>

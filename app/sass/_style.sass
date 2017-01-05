@@ -1,0 +1,1116 @@
+@import _imports.sass
+@import ../bower_components/uikit/scss/uikit-mixins.scss
+@import ../bower_components/uikit/scss/uikit.scss
+@import ../bower_components/uikit/scss/components/slideshow.scss
+@import ../bower_components/uikit/scss/components/search.scss
+@import ../bower_components/uikit/scss/components/slider.scss
+@import ../bower_components/uikit/scss/components/slidenav.scss
+@import ../bower_components/uikit/scss/components/form-file.scss
+@import _reset.sass
+@import _page-template.sass
+
+body
+    color: #424242
+    line-height: 1.2em
+    font-size: 16px
+    font-family: $font-base
+//werg2
+
+input
+    +phc(#a9a9a9)
+    width: 100%
+    height: 30px
+    border: none
+
+.site-wrapper
+    overflow: hidden
+//min-width: 320px
+
+.uk-container
+    width: auto
+
+.bg-blue
+    height: 300px
+    background: blue
+
+.b-masonry-grid
+    overflow: hidden
+    width: calc(100% + 30px)
+    font-size: 0
+    line-height: 0
+    margin-left: -15px
+    &__item
+        width: calc(33.3% - 30px)
+        margin: 15px
+        padding: 11% 0
+        display: inline-block
+        vertical-align: top
+        position: relative
+        overflow: hidden
+        .uk-overlay
+            +position(absolute, 0 0 0 0)
+        &:nth-child(3n)
+            padding: 14% 0
+
+        &:nth-child(4n)
+            margin-top: calc((6% - 15px) * -1)
+            width: calc(66.6% - 30px)
+            padding: 14% 0
+
+        &:nth-child(5n)
+            padding: 11% 0
+
+.account-panel__item
+    display: flex
+    align-items: center
+    justify-content: center
+
+.b-masonry-content
+    +position(absolute, 0 0 0 0)
+    display: block
+    background-position: center center
+    background-size: cover
+
+.overlay-hover
+    +trans()
+    &:hover
+        transform: scale(1.2)
+        &:before
+            height: 100%
+            width: 100%
+        &::after
+            top: 50%
+            opacity: 1
+            transform: translate3d(-50%, -50%, 0px) rotate(5deg)
+            -webkit-transform: translate3d(-50%, -50%, 0px) rotate(5deg)
+
+    &::before
+        background-color: rgba(255, 255, 255, 0.7)
+        content: ""
+        height: 0
+        left: 50%
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+        transition: all 0.3s ease 0s
+        -webkit-transition: all 0.3s ease 0s
+        width: 0
+        z-index: 1
+
+    &::after
+        font-family: $font-icon
+        background-color: #fff
+        border: 1px solid #e8e4e2
+        border-radius: 50%
+        color: #c4c4c4
+        content: "\f0c1"
+        font-size: 20px
+        height: 40px
+        left: 50%
+        line-height: 40px
+        opacity: 0
+        text-align: center
+        position: absolute
+        top: 0
+        transform: translate3d(-50%, -50%, 0px) rotate(1deg)
+        -webkit-transform: translate3d(-50%, -50%, 0px) rotate(1deg)
+        transition: all 0.3s ease 0s
+        -webkit-transition: all 0.3s ease 0s
+        width: 40px
+        z-index: 10
+
+.account-panel__item
+    padding-top: 10px
+    padding-bottom: 10px
+
+.list-dd
+    display: inline-block
+    font-size: 20px
+    line-height: 1.2em
+    width: 25%
+    margin: 0 !important
+    padding: 0 !important
+
+.list-dd-wrapper
+    max-width: 1200px
+    width: 100%
+    font-size: 0
+    line-height: 0
+
+.b-products
+    &-list
+        position: relative
+        top: -15px
+
+.b-sale-label
+    background: $lightblue
+    color: #fff
+    display: block
+    font-size: 12px
+    height: 20px
+    line-height: 22px
+    padding: 0
+    +position(absolute, 10px -25px none none)
+    text-align: center
+    transform: rotate(45deg)
+    overflow: hidden
+    width: 85px
+    z-index: 1
+
+.b-new-label
+    background: $pink
+    color: #fff
+    display: block
+    font-size: 12px
+    height: 20px
+    line-height: 22px
+    padding: 0
+    right: 0
+    +position(absolute, 10px none none -25px)
+    text-align: center
+    z-index: 1
+    transform: rotate(-45deg)
+    overflow: hidden
+    width: 85px
+
+.b-divider
+    margin: 30px 0
+    display: flex
+    &::before
+        background: #e1e1e1 none repeat scroll 0 0
+        content: ""
+        height: 1px
+        left: 0
+        position: absolute
+        top: 50%
+        width: 100%
+        z-index: 1
+    &-title
+        background: #fff
+        border: 1px solid #e1e1e1
+        display: inline-block
+        font-size: 16px
+        padding: 15px
+        z-index: 9
+        margin: auto
+
+.advantages-widget
+    position: relative
+    transform: translateY(+50%)
+    background-color: #EEEEEE
+
+.advantages-widget-item
+    text-align: center
+    box-sizing: border-box
+    display: flex
+    padding: 32px 0 15px
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    min-height: 170px
+    &:not(:last-child)
+        border-right: 1px solid #d6d6d6
+    [class*="uk-icon"]
+        font-size: 35px
+        color: #00ccd6
+        margin-bottom: 35px
+        +trans()
+        &:hover
+            color: $color-brand
+
+.page-footer
+    background-color: $black
+    padding-top: 100px
+    color: $darker-grey
+    a
+        &:not(.txt-pink)
+            color: $darker-grey
+            +trans()
+            &:hover
+                color: $color-brand
+    &__copyright
+        background-color: $superblack
+        &-title
+            margin: 60px 0 10px
+        &-navbar-item
+            padding-left: 10px
+            padding-right: 10px
+            &:not(:last-child)
+                border-right: 1px solid #B7B7B7
+
+.uk-tab.index-switcher
+    li
+        > a
+            padding-left: 0
+            padding-right: 0
+        &:not(:last-child) > a
+            +trans()
+            color: $black
+            &:hover
+                color: $pink
+            &:after
+                color: $black !important
+                content: '\f006'
+                font-family: $font-icon
+                margin-left: 10px
+                margin-right: 10px
+
+.b-slideshow
+    max-height: 440px
+
+.b-products-item
+    max-width: 270px
+    width: 100%
+    height: auto
+    img
+        +trans()
+        &:hover
+            transform: scale(1.5)
+    &-caption
+        @extend .uk-thumbnail-caption
+        &-icons
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .uk-icon-button
+                width: 24px
+                height: 24px
+                border-radius: 0
+                line-height: 24px
+                color: #a4a4a4
+                border: 1px solid #c4c4c4
+                background: transparent
+                +trans()
+                &:not(:last-child)
+                    margin-right: 10px
+                &:hover
+                    color: $color-brand
+
+.b-select-listing
+    @extend .uk-hidden-small
+    .uk-icon
+        +trans()
+        &:hover
+            color: $grey
+
+.products-item-wrapper
+    padding-top: 15px
+    &.list
+        padding-top: 0
+        &:not(:last-child)
+            .b-products-item
+                border-bottom: 1px solid #d6d4d4
+
+        max-width: 100%
+        width: 100%
+        .b-products-item
+            display: flex
+            justify-content: space-between
+            padding-bottom: 35px
+            padding-top: 35px
+            padding-right: 75px
+
+        .b-products-item-img
+            display: inline-block
+            vertical-align: middle
+            max-width: 270px
+            max-height: 310px
+            width: 100%
+            height: 100%
+        .b-products-item-caption
+            display: inline-block
+            vertical-align: middle
+            width: calc(100% - 305px)
+
+.uk-form-select
+    .jq-selectbox
+        &.focused
+            .jq-selectbox__select
+                border: none
+                box-shadow: none
+        .jq-selectbox__select
+            border: none
+
+.footer-column__title
+    margin: 60px 0 30px
+
+.footer-mail-form
+    max-width: 320px
+    width: 100%
+    margin: 0 auto
+
+.footer-socials
+    margin-top: 15px
+    margin-bottom: 10px
+    .uk-icon-button
+        width: 38px
+        height: 38px
+        line-height: 38px
+        border-radius: 0
+        background-color: transparent
+        border: 1px solid #4B4B4B
+
+        &:not(:last-child)
+            margin-right: 12px
+
+.footer-mail-form
+    input
+        background-color: #3a3a3a
+        padding: 0 12px
+        line-height: 42px
+        border: 1px solid #494949
+        color: #B7B7B7
+        +phc(#B7B7B7)
+
+.b-copyright__title
+    margin: 60px 0 10px
+
+.b-posts__tags
+    a
+        text-transform: uppercase
+        display: inline-block
+        vertical-align: middle
+        color: $color-brand
+        +trans()
+        &:hover
+            color: $grey
+        &:after
+            content: ','
+            display: inline-block
+            vertical-align: middle
+            color: $black
+
+.page-content__sidebar
+    @extend .uk-hidden-small
+
+.page-content__sidebar-item__title
+    border-bottom: 1px solid #dbdbdb
+    line-height: 16px
+    margin-bottom: 15px
+    padding-bottom: 10px
+    font-weight: bold
+
+.b-blog__post-date
+    color: #999999
+    &:before
+        content: '/'
+        display: inline-block
+        vertical-align: middle
+        margin-right: 5px
+
+.page-content__sidebar-item
+    &.blog-tags
+        .uk-button-group
+            .uk-button
+                border: 1px solid #dbdbdb
+                color: #494949
+                background-color: white
+    &:not(:last-child)
+        margin-bottom: 15px
+
+    .input-wrapper
+        height: 32px
+        margin-bottom: 10px
+        input
+            border: 1px solid #dbdbdb
+            width: 100%
+            height: 100%
+
+.b-breadcrumb
+    background-color: #f7f7f7
+    margin-bottom: 30px
+    padding: 15px 0
+    z-index: 400
+    position: relative
+
+.b-posts
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    &-item
+        display: flex
+        justify-content: space-between
+        &:not(:last-child)
+            margin-bottom: 20px
+        &__info
+            width: calc(100% - 90px)
+        &__img
+            width: 70px
+            height: auto
+            img
+                width: 100%
+
+.page-content__sidebar-item-wrapper
+    &:not(:last-child)
+        margin-bottom: 30px
+
+.uk-breadcrumb
+    > li
+        a
+            color: $black
+            &:hover
+                color: $color-brand
+        &:not(:first-child)::before
+            content: '\f105' !important
+            font-family: $font-icon
+        &.uk-active
+            color: $color-brand
+///wfef
+
+.b-categories-links-item
+    list-style: none
+    &:not(:last-child)
+        border-bottom: 1px solid #d6d4d4
+
+.b-categories-links
+    padding: 0
+
+.b-categories-links-item
+    padding: 5px 0 6px 10px
+    display: flex
+    align-items: stretch
+
+.b-categories-links-item__link
+    width: 100%
+    color: $black
+    &:before
+        content: "\f105"
+        display: inline
+        font-family: $font-icon
+        color: #333
+        padding-right: 8px
+
+/*--------------------------------------------------------------------*/
+//THUMBNAIL
+.uk-thumbnail
+    display: inline-block
+    max-width: 100%
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    border: none
+    background: #fff
+
+.uk-thumbnail-caption
+    border: none
+    box-shadow: none
+
+.uk-tab > li
+    > a
+        display: block
+        padding: 8px 12px 8px 12px
+        border: none
+        border-bottom-width: 0
+        color: $black
+        text-decoration: none
+        background: transparent
+
+        &:hover
+            background-color: transparent
+            color: $color-brand
+
+.uk-tab > li.uk-active > a
+    background: transparent
+    color: $pink
+
+.uk-tab-center
+    border: none
+
+.uk-breadcrumb
+    margin-bottom: 0
+
+.page-content__main__post
+    &.post
+        .post__info__socials
+            &.socials
+                .socials__tags
+                    a
+                        &:not(:last-child)::after
+                            content: ','
+
+        .post__info__comment
+            &.comment
+                .comment__title
+                    background-color: #f6f6f6
+                    border: 1px solid #efefef
+                    &.title
+                        .title__header, .title__footer
+                            color: #555454
+                            padding: 20px
+                        .title__content
+                            padding: 20px
+                        .title__content__alert
+                            background: $orange
+                            padding: 8px 15px
+                            margin-bottom: 18px
+                .comment-list
+                    background-color: #fff
+                    margin: 0
+                    width: 100%
+                    .comment-list__item
+                        border: 1px solid #efefef
+                        padding: 20px
+                        list-style: none
+
+.b-related-posts-item
+    .uk-thumbnail-caption
+        padding: 20px
+        border: 1px solid #EFEFEF
+    &.our-blog
+        .uk-thumbnail-caption
+            border: none
+            padding: 15px 0 10px
+
+.links-list-item
+    display: inline-block
+    vertical-align: middle
+    //wer
+    &:not(:last-child):after
+        content: ','
+        display: inline
+
+.uk-thumbnail-caption
+    > .uk-thumbnail
+        display: none
+
+.b-socials-reviews__item
+    &:not(:last-child)
+        margin-right: 15px
+
+.footer-column-wrapper
+    padding-bottom: 30px
+
+.logo-search-panel
+    .uk-search:before
+        font-size: 22px
+        //wrt
+        color: $black
+
+.b-page-header
+    color: $black
+    &__top-panel
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        &-account
+            display: flex
+            justify-content: space-between
+            flex-wrap: nowrap
+            &-item
+                display: flex
+                justify-content: center
+                align-items: center
+                &:not(:last-child)
+                    margin-right: 15px
+                &:hover
+                    color: $color-brand
+
+    &__lang-panel
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__navbar
+        z-index: 800
+        background: $black
+        &-basket-icon
+            [class*="uk-icon-"]
+            +position(absolute, 50% 35px none none)
+            transform: translateY(-50%)
+            display: none
+            color: #fff
+        &.uk-active
+            [class*="uk-icon-"]
+                display: block
+        &-item
+            display: flex
+            align-items: stretch
+            position: relative
+            &:not(.uk-navbar-nav)
+                @extend .uk-hidden-small
+            &.uk-navbar-nav
+                width: 100%
+                cursor: pointer
+                z-index: 800
+                @extend .uk-visible-small
+                text-align: left
+                font-size: 16px
+                color: #fff
+                text-transform: uppercase
+                line-height: 24px
+                [class*="uk-icon-"]
+                    margin-right: 10px
+                span
+                    font-weight: bold
+                    padding: 12px 0
+                li
+                    &:not(:last-child)
+                        border-bottom: 1px solid #E0D8D8
+                .uk-dropdown
+                    padding: 0 15px
+                    background-color: #faf8f8
+                .uk-nav
+                    padding: 0 15px
+                    & a
+                        &:hover
+                            background-color: transparent
+                            color: $color-brand
+                    .uk-parent
+                        & > a
+                            &:after
+                                float: right
+                                text-align: center
+                                content: '\f067'
+                                font-family: $font-icon
+                                font-size: 13px
+                                display: flex
+                                justify-content: center
+                                align-items: center
+            .uk-nav.list-dd
+                li
+                    &:first-child
+                        margin-bottom: 20px
+                        font-family: $font-base-bold
+                        text-transform: uppercase
+                        font-size: 15px
+                        color: $black
+                a
+                    padding: 0
+                    font-size: 13px
+                    &:not(:last-child)
+                        margin-bottom: 10px
+                    &:hover
+                        background-color: transparent
+                        color: $color-brand
+
+        &-link
+            color: #fff
+            padding: 20px
+            display: flex
+            justify-content: center
+            +trans()
+            &:hover
+                color: $pink
+
+.b-goods
+    &__presentation
+        display: flex
+        justify-content: space-between
+        &-miniatures
+            display: flex
+            flex-direction: column
+            width: 19.3%
+            &-item
+                &:not(:last-child)
+                    margin-bottom: 20px
+                img
+                    width: 100%
+                    height: auto
+        &__big-img
+            width: calc(80.7% - 30px)
+
+    &__info
+        &-header
+            border-bottom: 1px solid $grey
+            &-prices
+                padding: 10px 0 10px
+                p
+                    &:not(:last-child)
+                        margin-right: 20px
+
+        .info__content
+            &.content
+                .content__form
+                    padding-top: 20px
+                    padding-bottom: 20px
+                    &.form
+                        .form__block
+                            label
+                                width: 80px
+                            &:not(:last-child)
+                                margin-bottom: 17px
+                            .jq-selectbox__select
+                                min-width: 170px
+                                //er
+                                border: 1px solid #dbdbdb
+                            .jq-radio
+                                border-radius: 0
+                                width: 18px
+                                height: 18px
+                                margin: 0
+                                padding: 0
+                                border: none
+                                &:not(:last-child)
+                                    margin-right: 10px
+                                &.orange
+                                    background: $orange
+                                &.yellow
+                                    background: $yellow
+                                &.checked
+                                    position: relative
+                                    &:before
+                                        content: ''
+                                        display: block
+                                        +position(absolute, -4px -3px -3px -3px)
+                                        border: 1px solid #333
+                                    .jq-radio__div
+                                        display: none
+                .content__sharing-buttons
+                    border-top: 1px solid $grey
+                    border-bottom: 1px solid $grey
+                    padding: 10px 0 20px 0
+                    .empty-btn
+                        font-family: $font-base
+                        margin-top: 10px
+                        border-radius: 0
+                        padding: 0 5px
+
+        .info__social-buttons
+            padding-top: 16px
+            .uk-icon-button
+                margin-top: 10px
+                font-size: 15px
+                @extend .empty-btn
+                width: initial
+                height: initial
+                border-radius: 0
+                &:hover
+                    color: #fff
+                    border-color: transparent
+                +trans()
+                &::before
+                    margin-right: 5px
+                //egthgd
+                &.uk-icon-twitter
+                    &:hover
+                        background-color: $blue-twitter
+                &.uk-icon-facebook
+                    &:hover
+                        background-color: $blue-facebook
+                &.uk-icon-google-plus
+                    &:hover
+                        background-color: $red-g-plus
+                &.uk-icon-pinterest
+                    &:hover
+                        background-color: $red-pinterest
+
+.jq-selectbox__select
+    background: none
+    box-shadow: none
+    border: none
+    border-radius: 0
+    &:hover
+        background: transparent
+    .jq-selectbox__trigger
+        display: flex
+        align-items: center
+        justify-content: center
+    .jq-selectbox__trigger-arrow
+        @extend .uk-icon-angle-down
+        font-family: $font-icon
+        border: none
+        &::before
+            +position(absolute, 50% 0 none none)
+            transform: translateY(-45%)
+    .jq-selectbox__trigger
+        border: none
+    .jq-radio
+        border-radius: 0
+        width: 18px
+        height: 18px
+        margin: 0
+        padding: 0
+        border: none
+
+.b-product-full-review
+    &.review
+        .review__content
+            padding-top: 15px
+
+.b-related-products-slider
+    &__content
+        +trans()
+        &:hover
+            .uk-slidenav-previous, .uk-slidenav-next
+                visibility: visible
+        .uk-slidenav-previous, .uk-slidenav-next
+            display: block
+            font-family: $font-icon
+            height: 40px
+            line-height: 38px
+            font-size: 20px
+            color: $grey
+            width: 30px
+            border: 1px solid $grey
+            //wef
+            background-color: #fff
+            text-align: center
+            +trans()
+            visibility: hidden
+            z-index: 1500
+            &:hover
+                border-color: $color-brand
+                color: $color-brand
+        .uk-slidenav-next
+
+            +position(absolute, 50% 0 none none)
+            transform: translate(50%, -115%)
+            &:before
+                content: "\f105"
+                display: block
+
+        .uk-slidenav-previous
+            +position(absolute, 50% none none 0)
+            transform: translate(-50%, -115%)
+            &:before
+                content: "\f104"
+                display: block
+
+.b-blog-content
+    &.blog-content
+        .uk-grid
+            position: relative
+            top: -60px
+        .blog-content__post
+            padding-top: 60px
+            &.post
+                .uk-thumbnail-caption
+                    padding: 0
+        .blog-content__title
+            z-index: 200
+            position: relative
+
+.b-socials-reviews
+    color: $txt-grey
+    .b-star-evaluation
+        color: $black
+
+.b-socials-reviews__item
+
+    p
+        font-size: 11px
+
+.b-filter-main
+    &__contain
+        .uk-grid
+        position: relative
+        top: -15px
+    &__title
+        z-index: 200
+        position: relative
+    &__sort-bar
+        border-top: 1px solid $lightgrey
+        border-bottom: 1px solid $lightgrey
+        padding-top: 10px
+        padding-bottom: 10px
+        &-select
+            .jq-selectbox__select
+            border: 1px solid $lightgrey
+            box-shadow: none !important
+            height: 27px
+            .jq-selectbox__select-text
+                line-height: 27px
+            .jq-selectbox__trigger-arrow
+                line-height: 27px
+                [class*="uk-icon"]
+                    line-height: 1em
+                    +trans()
+                    color: #e1e0e0
+                    &:hover
+                        color: $color-brand
+        &-form
+            button
+                height: 27px
+                border: 1px solid $grey
+                color: $txt-grey
+                background: transparent
+    &__footer
+        padding: 12px 0 12px 0
+        border-top: 1px solid #dbdbdb
+        border-bottom: 1px solid #dbdbdb
+
+.b-filter-sidebar
+    &-item
+        .item__img
+        width: 100%
+        .item__text
+            width: calc(100% - 112px)
+        &__block-enabled-notify
+            background-color: #eee
+            padding: 10px
+        &__block
+            +trans()
+            &:not(:last-child)
+                margin-bottom: 15px
+            &-link-line
+                border-bottom: 1px solid #dbdbdb
+                padding-top: 7px
+                padding-bottom: 7px
+                &.colored
+                    padding-left: 30px
+                    position: relative
+                &-color
+                    +position(absolute, 50% none none 0)
+                    transform: translateY(-50%)
+                    width: 15px
+                    height: 15px
+                    border: 1px solid #ccc
+                    &.green
+                        background-color: $green
+                    &.black
+                        background-color: $black
+                    &.beige
+                        background-color: $beige
+
+.b-contacts
+    &__title
+        margin-bottom: 25px
+        margin-top: 10px
+    &__contain
+        &-form
+            max-width: 570px
+            width: 100%
+            &-block
+                max-width: 400px
+                width: 100%
+                display: flex
+                justify-content: space-between
+                flex-wrap: wrap
+                align-items: center
+                border-bottom: 1px solid #dbdbdb
+                padding: 3px 5px
+                textarea
+                    height: 150px
+                    background-color: #f3f3f3
+                    border: medium none
+                    width: 100%
+                &.form-file
+                    padding-top: 15px
+                    .button
+                        &:hover
+                            background-color: $pink
+                &.form-textarea
+                    max-width: 570px
+                    padding: 15px 0 15px 0
+                    border: none
+                label
+                    max-width: 120px
+                    width: 100%
+                .input-wrapper
+                    width: calc(100% - 120px)
+                    input
+                        height: 32px
+                        font-size: 16px
+                        color: $txt-grey
+                        &:hover, &:focus, &:active
+                            border: none !important
+
+.b-page-content-info
+    padding: 50px 0 15px 0
+    border-top: 1px dashed $lightgrey
+    &-item
+        display: flex
+        justify-content: flex-start
+        .uk-icon-button
+            flex-basis: 66px
+            flex-shrink: 0
+            height: auto
+            width: 100%
+            background-color: $color-brand
+            border-radius: 50%
+            font-size: 34px
+            line-height: 66px
+            color: #fff
+        &-text
+            padding-left: 20px
+
+#contain__map
+    height: 450px
+    width: 100%
+
+/*--------------------------------------------------------------*/
+//~SLIDER-RANGE
+.input-range-wrapper
+    .slider
+        .tooltip-inner
+            display: none !important
+        .slider-track
+            height: 3px
+
+            .slider-handle.round
+                height: 16px
+                width: 16px
+                border-radius: 50%
+                background-color: $black
+                &:last-child
+                    background-color: $color-brand
+
+.b-header__logo
+    +sprite(logo-imake)
+    display: inline-block
+
+.circle-counter
+    width: 17px
+    height: 17px
+    background-color: $color-brand
+    color: #fff
+    font-size: 10px
+    line-height: 17px
+    text-align: center
+    border-radius: 50%
+    +position(absolute, -5px -10px none none)
+
+.uk-modal-dialog
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5)
+
+.uk-lightbox-content
+    padding: 15px
+
+.uk-modal-caption
+    display: inline-block
+    padding: 2px 20px
+    background: rgba(0, 0, 0, 0.8)
+    -webkit-border-radius: 15px
+    -moz-border-radius: 15px
+    border-radius: 15px
+    text-shadow: 0 1px 2px #222
+    color: #FFF
+    font-weight: bold
+    max-width: 200px
+    height: auto
+    left: 50%
+    transform: translateX(-50%)
+    bottom: -27px
+
+.b-post-date
+    +clearfix()
+    bottom: 15px
+    color: white
+    left: 15px
+    position: absolute
+    &__main
+        border: 1px solid white
+        float: left
+        font-size: 38px
+        height: 44px
+        line-height: 42px
+        margin-right: 12px
+        text-align: center
+        width: 52px
+    &__m-y
+        float: left
+        font-size: 16px
+        line-height: 23px
+
+.b-our-partners-slider
+    border-top: 1px solid #EFEFEF
+    padding: 30px 0
+    &-item
+        opacity: 0.5
+        +trans()
+        //fwgwre
+        &:hover
+            opacity: 1
+        .uk-thumbnail-caption
+            border: none
+

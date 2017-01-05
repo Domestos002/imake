@@ -1,0 +1,10 @@
+<div class="b-related-products-slider products-slider">
+    <div class="b-divider p-rel">
+        <span class="b-divider-title ttu">RELATED PRODUCTS</span>
+    </div>
+    <div class="products-slider__content" id="products-slider">
+        {% for i in 1..10 %}
+            {% include "../elements/b-products-item.twig" %}
+        {% endfor %}
+    </div>
+</div>

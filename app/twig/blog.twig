@@ -1,0 +1,85 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+    {% include "widgets/breadcrumb.twig" %}
+    <div class="page-content">
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid" data-uk-grid="{gutter: 40}">
+            <div class="page-content__sidebar sidebar-nav uk-width-small-1-1 uk-width-medium-1-4">
+                {% include "elements/sidebar-latest-posts.twig" %}
+                {% include "elements/sidebar-popular-posts.twig" %}
+                {% include "elements/sidebar-blog-categories.twig" %}
+                {% include "elements/sidebar-search-in-blog.twig" %}
+                {% include "elements/sidebar-blog-tags.twig" %}
+            </div>
+            <div class="page-content__main uk-width-small-1-1 uk-width-medium-3-4">
+                <div class="b-blog-content blog-content">
+                    <div class="uk-grid">
+                        <div class="uk-width-medium-1-1">
+                            <div class="blog-content__post post uk-thumbnail">
+                                <div class="img-wrapper mb25">
+                                    <img src="http://placehold.it/1200x584" alt="" class="post-img">
+                                </div>
+                                <div class="uk-thumbnail-caption tal">
+                                    <div class="links-list tal mb15 fz25 txt-bold">
+                                        <a href="#" class="brand-hover links-list-item txt-black">
+                                            BUY CHEAP WOMEN'S SHOES
+                                        </a>
+                                        <a href="#" class="brand-hover links-list-item txt-black">
+                                            BOOTS & HEELS
+                                        </a>
+                                    </div>
+                                    <div class="fx-start fz11 mb15">
+                                        <a href="#" class="txt-pink dib vam mr5">fashion</a>
+                                        <span class="b-blog__post-date dib vam">September 14th 2016</span>
+                                    </div>
+                                    <div class="mb20">
+                                        <p class="txt-black taj lh26">
+                                            Lorem ipsum dolor sit amet, consectetur adi elit. Integer nec odio. Praesent libero. Sed cur ante dapibus diam. Sed nisi.
+                                        </p>
+                                    </div>
+                                    <div class="fx-justify fx-wrap fx-items-center">
+                                        <div>
+                                            <a href="#" class=" fz12 dib btn brn empty-btn ttu">
+                                                keep reading
+                                                <i class="ml10 uk-icon uk-icon-angle-right"></i>
+                                            </a>
+                                        </div>
+                                        <div class="b-socials-reviews fx-justify">
+                                            <div class="b-socials-reviews__item">
+                                                {% include "widgets/b-star-evaluation.twig" %}
+                                            </div>
+
+                                            <div class="b-socials-reviews__item ">
+                                                <span class="uk-icon-comment-o"></span>
+                                                <p class="di">38</p>
+                                            </div>
+                                            <div class="b-socials-reviews__item item">
+                                                <span class="uk-icon-thumbs-o-up"></span>
+                                                <p class="di">38</p>
+                                            </div>
+                                            <div class="b-socials-reviews__item item">
+                                                <span class="uk-icon-eye"></span>
+                                                <p class="di">38</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% for i in 1..4 %}
+                            <div class="uk-width-small-1-1 uk-width-medium-1-2">
+                                {% include "elements/blog-post-item.twig" %}
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include "widgets/advantages-widget.twig" %}
+    </div>
+
+{% endblock %}

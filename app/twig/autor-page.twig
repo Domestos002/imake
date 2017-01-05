@@ -1,0 +1,37 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+    {% include "widgets/breadcrumb.twig" %}
+    <div class="page-content">
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid">
+            <div class="page-content__sidebar sidebar-nav uk-width-small-1-1 uk-width-medium-1-4">
+                {% include "elements/sidebar-latest-posts.twig" %}
+                {% include "elements/sidebar-popular-posts.twig" %}
+                {% include "elements/sidebar-blog-categories.twig" %}
+                {% include "elements/sidebar-search-in-blog.twig" %}
+                {% include "elements/sidebar-blog-tags.twig" %}
+            </div>
+            <div class="page-content__main uk-width-small-1-1 uk-width-medium-3-4">
+                <div class="b-blog-content blog-content">
+                    <div class="blog-content__title fluid mb15">
+                        <span class="txt-black fz22">AUTHOR: "DOLA NGUYEN"</span>
+                    </div>
+
+                    <ul class="uk-grid">
+                        {% for i in 1..4 %}
+                            <li class="uk-width-small-1-1 uk-width-medium-1-2 ">
+                                {% include "elements/blog-post-item.twig" %}
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% include "widgets/advantages-widget.twig" %}
+    </div>
+
+{% endblock %}
